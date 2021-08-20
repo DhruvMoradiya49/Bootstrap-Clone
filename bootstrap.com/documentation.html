@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Bootstrap.com</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="CSS/main.css">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="home.html"><img src="Images/logo.png" alt="logo" width="250px" height="40px"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="doc">
+                <div class="doc-menu">
+                    <form><input type="search" id="search" placeholder="Search..."></form><hr/>
+                    <div class="doc-layout">
+                        <ul>
+                            <li><a href="#">Getting Started</a></li><br>
+                            <li><a href="#" id="head">Layout</a></li>
+                            <li><a href="#" id="sub-doc">Overview</a></li>
+                            <li><a href="about.html">About</a></li>
+                        </ul>
+                    </div>
+				</div>
+				
+				<div class="mob-menu">
+					<div class="sub-menu">
+						<ul>
+							<li><form><input type="search" id="search" placeholder="Search..."></form></li>
+								<li><a><img src="Images/menu.png" alt="menu" height="30px" width="30px"></a>
+								<div class="doc-layout">
+									<ul>
+										<li><a href="#">Getting Started</a></li>
+										<li><a href="#" id="head">Layout</a></li>
+										<li><a href="#" id="sub-doc">overview</a></li>
+										<li><a href="about.html">About</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+                
+
+                <div class="doc-desc">
+                    <div class="overview">
+                        <h1>Layout</h1>
+						<h2>Bootstrap Layout</h2>
+                        <p>We present here some components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.</p><hr>
+                    </div> 
+                    <div class="doc-cont">
+                        <h2>Containers</h2>
+                        <p>Containers are the most basic layout element in Bootstrap and are <strong>required when using our default grid system.</strong> Containers are used to contain, pad, and (sometimes) center the content within them. While containers can be nested, most layouts do not require a nested container.</p><br>
+                        <p>Bootstrap comes with three different containers:</p>
+                        <ui>
+                            <li><code>.container</code>, which sets a <code>max-width</code> at each responsive breakpoint</li>
+                            <li><code>.container-fluid</code>, which is <code>width: 100%</code> at all breakpoints</li>
+                            <li><code>.container-{breakpoint}</code>, which is <code>width: 100%</code> until the specified breakpoint</li>
+                        </ui><br>
+                        <p>The table below illustrates how each container’s <code>max-width</code> compares to the original <code>.container</code> and <code>.container-fluid</code> across each breakpoint.</p>
+                        
+                        <div class="tab">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Extra small<br><span class="small">&lt;576px</span></th>
+                                        <th>Small<br><span class="small">&ge;576px</span></th>
+                                        <th>Medium<br><span class="small">&ge;768px</span></th>
+                                        <th>Large<br><span class="small">&ge;992px</span></th>
+                                        <th>Extra large<br><span class="small">&ge;1200px</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-1"><code>.container</code></td>
+                                        <td id="full">100%</td>
+                                        <td>540px</td>
+                                        <td>720px</td>
+                                        <td>960px</td>
+                                        <td>1140px</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1"><code>.container-xxsm</code></td>
+                                        <td id="full">100%</td>
+                                        <td>540px</td>
+                                        <td>720px</td>
+                                        <td>960px</td>
+                                        <td>1140px</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1"><code>.container-xsm</code></td>
+                                        <td id="full">100%</td>
+                                        <td>540px</td>
+                                        <td>720px</td>
+                                        <td>960px</td>
+                                        <td>1140px</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1"><code>.container-sm</code></td>
+                                        <td id="full">100%</td>
+                                        <td>540px</td>
+                                        <td>720px</td>
+                                        <td>960px</td>
+                                        <td>1140px</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1"><code>.container-md</code></td>
+                                        <td id="full">100%</td>
+                                        <td id="full">100%</td>
+                                        <td>720px</td>
+                                        <td>960px</td>
+                                        <td>1140px</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1"><code>.container-lg</code></td>
+                                        <td id="full">100%</td>
+                                        <td id="full">100%</td>
+                                        <td id="full">100%</td>
+                                        <td>960px</td>
+                                        <td>1140px</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1"><code>.container-xl</code></td>
+                                        <td id="full">100%</td>
+                                        <td id="full">100%</td>
+                                        <td id="full">100%</td>
+                                        <td id="full">100%</td>
+                                        <td>1140px</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-1"><code>.container-fluid</code></td>
+                                        <td id="full">100%</td>
+                                        <td id="full">100%</td>
+                                        <td id="full">100%</td>
+                                        <td id="full">100%</td>
+                                        <td id="full">100%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h2>All-in-one</h2>
+                        <p>Our default <code>.container</code> class is a responsive, fixed-width container, meaning its max-width changes at each breakpoint.</p>
+						<p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container or fluid-width.</p>
+						<p>While containers can be nested, most layouts do not require a nested container.</p>
+						<div class="border-layout">
+							<div class="layout">
+								<img src="Images/container.PNG" alt="container">
+							</div>
+							<div class="code-lang">
+								<strong>HTML</strong>
+							</div>
+							<div class="all-code">
+								<code>
+									<span id="all">&lt;div</span> <span id="cname">class=</span><span id="classname">"container"</span><span id="all">&gt;</span><br>
+									<span id="comment">&lt;!-- Content here --&gt;</span> <br>
+									<span id="all">&lt;/div&gt;</span>
+								</code>
+							</div>
+						</div>
+                        <h2>Fluid</h2>
+                        <p>Use<code>.container-fluid</code> for a full width container, spanning the entire width of the viewport.</p>
+						<div class="border-layout">
+							<div class="layout-fluid">
+								<img src="Images/container-fluid.PNG" alt="container">
+							</div>
+							<div class="code-lang">
+								<strong>HTML</strong>
+							</div>
+							<div class="all-code">
+								<code>
+									<span id="all">&lt;div</span> <span id="cname">class=</span><span id="classname">"container-fluid"</span><span id="all">&gt;</span><br>
+									<span id="comment">&lt;!-- Content here --&gt;</span> <br>
+									<span id="all">&lt;/div&gt;</span>
+								</code>
+							</div>
+						</div>
+                        
+                        <h2>Responsive Breakpoints</h2>
+                        <p>Responsive containers are new in Bootstrap v4.4. They allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply <code>max-width</code>s for each of the higher breakpoints. For example, <code>.container-sm</code> is 100% wide to start until the <code>sm</code> breakpoint is reached, where it will scale up with <code>md</code>, <code>lg</code>, and <code>xl</code>.</p>
+						<div class="code-lang">
+								<strong>HTML</strong>
+							</div>
+                        <div class="res-code">
+                            <code>
+                                <span id="all">&lt;div</span> <span id="cname">class=</span><span id="classname">"container-sm"</span><span id="all">&gt;</span> <span class="detail">100% wide until small breakpoint</span> <span id="all">&lt;/div&gt;</span><br>
+                                <span id="all">&lt;div</span> <span id="cname">class=</span><span id="classname">"container-md"</span><span id="all">&gt;</span> <span class="detail">100% wide until medium breakpoint</span> <span id="all">&lt;/div&gt;</span><br>
+                                <span id="all">&lt;div</span> <span id="cname">class=</span><span id="classname">"container-lg"</span><span id="all">&gt;</span> <span class="detail">100% wide until large breakpoint</span> <span id="all">&lt;/div&gt;</span><br>
+                                <span id="all">&lt;div</span> <span id="cname">class=</span><span id="classname">"container-xl"</span><span id="all">&gt;</span> <span class="detail">100% wide until extra large breakpoint</span> <span id="all">&lt;/div&gt;</span><br>
+                            </code>
+                        </div>
+						
+						<h2>Z-index</h2>
+                        <p>Several Bootstrap components utilize <code>z-index</code>, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that’s been designed to properly layer navigation, tooltips and popovers, modals, and more.</p>
+						<p>These higher values start at an arbitrary number: high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components — tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in their behaviors. There’s no reason we couldn’t have used <code>100+</code> or <code>500+</code>.</p>
+						<p>We don’t encourage customization of these values; should you change one, you likely need to change them all.</p>
+						<div class="code-lang">
+								<strong>CSS</strong>
+							</div>
+                        <div class="res-code">
+                            <code>
+								<span class="detail">$</span><span id="classname">zindex-sticky</span>: <span class="detail"> 1020 !default;</span> <br>
+                                <span class="detail">$</span><span id="classname">zindex-fixed</span>: <span class="detail"> 1030 !default;</span> <br>
+								<span class="detail">$</span><span id="classname">zindex-modal-backdrop</span>: <span class="detail"> 1040 !default;</span> <br>
+								<span class="detail">$</span><span id="classname">zindex-modal</span>: <span class="detail"> 1050 !default;</span> <br>
+								<span class="detail">$</span><span id="classname">zindex-popover</span>: <span class="detail"> 1060 !default;</span> <br>
+								<span class="detail">$</span><span id="classname">zindex-tooltip</span>: <span class="detail"> 1070 !default;</span> <br>
+                            </code>
+                        </div>
+						<p>To handle overlapping borders within components (e.g. buttons and inputs in input groups), we use low single digit <code>z-index</code> values of <code>1</code>, <code>2</code>, and <code>3</code> for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher <code>z-index</code> value to show their border over their sibling elements.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+			<div class="footer">
+				<div class="footer-logo">
+                    <a href="home.html"><img src="Images/logo.png" alt="logo" width="250px" height="40px"></a>
+				</div>
+				<div class="bottom-links">
+					<a href="#">GITHUB</a>
+					<a href="#">EXAMPLES</a>
+					<a href="#">PRIVACY</a>
+					<a href="about.html">ABOUT</a>
+				</div>
+				<div class="icon-list">
+						<a class="icons" href="#"><img src="Images/facebook.png" width="20px" height="20px" /></a>
+						<a class="icons" href="#"><img src="Images/instagram-sketched.png" width="20px" height="20px" /></a>
+						<a class="icons" href="#"><img src="Images/twitter.png" width="20px" height="20px" /></a>
+						<a class="icons" href="#"><img src="Images/youtube.png" width="20px" height="20px" /></a>
+					</div>
+			</div>
+            <div class="copyright">
+                <p>&copy; <strong>Bootstrap</strong>.com All rights reserved.</p>
+				
+            </div>
+        </footer>
+    </body>
+</html>
